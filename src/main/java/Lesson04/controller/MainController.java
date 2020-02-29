@@ -52,7 +52,6 @@ public class MainController {
     public String productListBetweenPrise(Model model, @RequestParam("costmin") Double costMin, @RequestParam("costmax") Double costMax) {
         List<Product> allProducts = productService.getAllProductsBetw(costMin,costMax);
         model.addAttribute("products", allProducts);
-        System.out.println("TEST");
         return "product-list";
     }
 
