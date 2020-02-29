@@ -19,4 +19,12 @@ public class ProductService {
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
+
+    public List<Product> getAllProductsMin(Double maxCost) {
+        return productRepository.findAllByCostLessThanEqual(maxCost);
+    }
+
+    public List<Product> getAllProductsMax(Double maxCost) {
+        return productRepository.findAllByCostGreaterThanEqual(maxCost);
+    }
 }

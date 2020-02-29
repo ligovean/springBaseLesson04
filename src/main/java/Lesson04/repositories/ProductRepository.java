@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
     List<Product>findAll();
+
+    List<Product>findAllByCostLessThanEqual(Double cost);
+
+    List<Product>findAllByCostGreaterThanEqual(Double cost);
 }
