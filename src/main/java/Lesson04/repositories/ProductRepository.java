@@ -11,4 +11,6 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, L
     List<Product>findAllByCostLessThanEqual(Double cost);
 
     List<Product>findAllByCostGreaterThanEqual(Double cost);
+
+    List<Product>findAllByCostBetween(Double costMin, Double costMax);
 }

@@ -27,4 +27,8 @@ public class ProductService {
     public List<Product> getAllProductsMax(Double maxCost) {
         return productRepository.findAllByCostGreaterThanEqual(maxCost);
     }
+
+    public List<Product> getAllProductsBetw(Double minCost,Double maxCost) {
+        return productRepository.findAllByCostBetween(minCost,maxCost);
+    }
 }
